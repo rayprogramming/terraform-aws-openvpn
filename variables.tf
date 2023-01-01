@@ -15,6 +15,23 @@ variable "server_password" {
   type        = string
 }
 
+variable "vpc_id" {
+  type        = string
+  description = "The id of the VPC"
+}
+
+variable "instance_subnet" {
+  type        = string
+  description = "Subnet ID for the gameserver instance"
+}
+
+variable "instance_availability_zone" {
+  type        = string
+  description = "Availability Zone for the gameserver instance"
+}
+
+
+
 locals {
   images = {
     us-east-1      = "ami-037ff6453f0855c46"
